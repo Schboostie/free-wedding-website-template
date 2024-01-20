@@ -748,12 +748,18 @@
       <div class="col-lg-8">
         <div class="text-center">
           <form action="https://formsubmit.co/schboostie@gmail.com" method="POST">
+            <!-- User Details -->
+            <input type="email" name="email" placeholder="Your Email" required>
+
+            <!-- RSVP Form Fields -->
             <div class="form-row">
               <div class="form-group col-sm-6">
                 <input
                   type="text"
                   class="form-control bg-secondary border-0 py-4 px-3"
                   placeholder="Your Name"
+                  name="name"
+                  required
                 />
               </div>
               <div class="form-group col-sm-6">
@@ -761,6 +767,8 @@
                   type="email"
                   class="form-control bg-secondary border-0 py-4 px-3"
                   placeholder="Your Email"
+                  name="guest_email"
+                  required
                 />
               </div>
             </div>
@@ -769,6 +777,8 @@
                 <select
                   class="form-control bg-secondary border-0"
                   style="height: 52px"
+                  name="guest_count"
+                  required
                 >
                   <option>Number of Guest</option>
                   <option>1</option>
@@ -781,6 +791,8 @@
                 <select
                   class="form-control bg-secondary border-0"
                   style="height: 52px"
+                  name="attendance_option"
+                  required
                 >
                   <option>I'm Attending</option>
                   <option>All Events</option>
@@ -793,9 +805,18 @@
                 class="form-control bg-secondary border-0 py-2 px-3"
                 rows="5"
                 placeholder="Message"
-                required="required"
+                name="message"
+                required
               ></textarea>
             </div>
+
+            <!-- FormSubmit Features -->
+            <input type="hidden" name="_subject" value="New RSVP Submission">
+            <input type="hidden" name="_autoresponse" value="Thank you for your RSVP! We have received your message.">
+            <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
+            <input type="hidden" name="_template" value="table">
+            
+            <!-- Submit Button -->
             <div>
               <button
                 class="btn btn-primary font-weight-bold py-3 px-5"
@@ -812,7 +833,8 @@
 </div>
 <!-- RSVP End -->
 
-    <!--New Form-->
+
+    <!--New Form End-->
 
     <!-- Footer Start -->
     <div
